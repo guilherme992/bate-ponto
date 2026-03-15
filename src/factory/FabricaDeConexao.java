@@ -1,5 +1,6 @@
 package factory;
 
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
@@ -9,12 +10,11 @@ import java.sql.SQLException;
 // Singleton -> Permite criar apenas uma instância da classe
 public class FabricaDeConexao {
 
-    public void con() throws SQLException {
+    public Connection con() throws SQLException {
         var url = "jdbc:mysql://localhost:3306/BatePonto";
         var user = "root";
-        var password = "univille";
-        DriverManager.getConnection(url, user, password);
-        System.out.println("Conectado com sucesso!");
+        var password = "root";
+        return DriverManager.getConnection(url, user, password);
     }
 
 }

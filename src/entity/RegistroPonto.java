@@ -1,13 +1,23 @@
 package entity;
 
-import java.time.LocalDateTime;
+import java.sql.Timestamp;
 
 public class RegistroPonto {
-    public RegistroPonto() {
 
-    }
     private int id;
     private int fkfuncionario;
-    private LocalDateTime dataHora;
+    private Timestamp dataHora;
 
+    public RegistroPonto(int fkfuncionario, Timestamp dataHora) {
+        this.fkfuncionario = fkfuncionario;
+        this.dataHora = dataHora;
+    }
+
+    public int getFkFuncionario() {
+        return fkfuncionario;
+    }
+
+    public Timestamp getDataHora() {
+        return dataHora;
+    }
 }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/src/bateponto_departamento.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/bateponto_funcionario.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/bateponto_registroponto.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/dao/DepartamentoDAO.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/dao/FuncionarioDAO.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/dao/RegistroPontoDAO.java" dialect="GenericSQL" />
+  </component>
+</project>

@@ -1,10 +1,9 @@
-import factory.*;
-
+import view.Menu;
 import java.sql.SQLException;
 
 public class Main {
     public static void main(String[] args) throws SQLException {
-        FabricaDeConexao fabrica = new FabricaDeConexao();
-        fabrica.con();
+        Menu menu = new Menu();
+        menu.iniciar();
     }
 }
