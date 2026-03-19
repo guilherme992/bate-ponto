@@ -10,24 +10,24 @@ create table funcionario
     id             int auto_increment
         primary key,
     nome           varchar(45) not null,
-    matricula      int         not null unique,
+    matricula      int         not null,
     fkdepartamento int         null,
+    constraint matricula
+        unique (matricula),
     constraint fkdepartamento
         foreign key (fkdepartamento) references departamento (id)
 );
 
-create index fkdepartamento
-    on funcionario (fkdepartamento);
-
 create table registroponto
 (
-    id          int auto_increment
+    id            int auto_increment
         primary key,
-    fkmatricula int       not null,
-    datahora    timestamp not null,
+    fkfuncionario int       not null,
+    datahora      timestamp not null,
     constraint fkfuncionario
-        foreign key (fkmatricula) references funcionario (matricula)
+        foreign key (fkfuncionario) references funcionario (matricula)
 );
 
 create index idx_fkmatricula
-    on registroponto (fkmatricula);
+    on registroponto (fkfuncionario);
+

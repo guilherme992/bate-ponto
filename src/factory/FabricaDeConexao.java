@@ -13,7 +13,7 @@ public class FabricaDeConexao {
     public Connection con() throws SQLException {
         var url = "jdbc:mysql://localhost:3306/BatePonto";
         var user = "root";
-        var password = "root";
+        var password = "univille";
         return DriverManager.getConnection(url, user, password);
     }
 
